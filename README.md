@@ -3,21 +3,25 @@ Lab: GSP002
 Getting Started with Cloud Shell and gcloud
 
 Task 01:
-Ativar o Cloud Shell
+Ativar o Cloud Shell e autorizar:
+
     gcloud auth list
 
-Listar o projeo
+Listar o projeto:
+
     gcloud config list project
     
-Regiôes
+Exemplo de Regiôes:
 
-Western US: us-west1-a ou us-west1-b
-Central US: us-central1-a, us-central1-b, us-central1-c ou us-central1-f
-Eastern US: us-east1-b, us-east1-c ou us-east1-d
-Western Europe: europe-west1-b, europe-west1-c ou europe-west1-d
-Eastern Asia: asia-east1-a, asia-east1-b ou asia-east1-c
+    Western US: us-west1-a ou us-west1-b
+    Central US: us-central1-a, us-central1-b, us-central1-c ou us-central1-f
+    Eastern US: us-east1-b, us-east1-c ou us-east1-d
+    Western Europe: europe-west1-b, europe-west1-c ou europe-west1-d
+    Eastern Asia: asia-east1-a, asia-east1-b ou asia-east1-c
 
-gcloud config set compute/region 
+Setando a região: 
+
+    gcloud config set compute/region us-west1 
 gcloud config get-value compute/region
 
 gcloud config set compute/zone
