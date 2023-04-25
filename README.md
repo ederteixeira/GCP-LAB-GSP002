@@ -1,8 +1,8 @@
 # GCP-LAB01
-Lab: GSP002
-Getting Started with Cloud Shell and gcloud
+## Lab: GSP002
+## Getting Started with Cloud Shell and gcloud
 
-Task 01:
+### Task 01:
 Ativar o Cloud Shell e autorizar:
 
     gcloud auth list
@@ -87,7 +87,7 @@ Exibe a lista de componentes:
     
     gcloud components list
 
-Task 02
+### Task 02
 
 Liste a instância de computação disponível no projeto:
 
@@ -109,7 +109,7 @@ Liste as regras de firewall da rede padrão em que a regra de permissão corresp
 
     gcloud compute firewall-rules list --filter="NETWORK:'default' AND ALLOW:'icmp'"
 
-Task 03
+### Task 03
 
 Conectando à VM via SSH:
 
@@ -123,7 +123,7 @@ Desconectar da máquina no SSH
  
     exit
 
-Task 04
+### Task 04
 
 Listar as regras de firewall do projeto:
 
@@ -145,7 +145,7 @@ Validar se a máquina virtual aceita a comunicação HTTP:
 
     curl http://$(gcloud compute instances list --filter=name:gcelab2 --format='value(EXTERNAL_IP)')
 
-Task 05:
+### Task 05:
 
 Exibir os logs disponíveis no sistema:
     
