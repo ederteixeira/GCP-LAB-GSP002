@@ -11,27 +11,47 @@ Listar o projeto:
 
     gcloud config list project
     
-Exemplo de Regiôes:
+Exemplo de Regiôes e Zonas:
 
-    Western US: us-west1-a ou us-west1-b
-    Central US: us-central1-a, us-central1-b, us-central1-c ou us-central1-f
-    Eastern US: us-east1-b, us-east1-c ou us-east1-d
-    Western Europe: europe-west1-b, europe-west1-c ou europe-west1-d
-    Eastern Asia: asia-east1-a, asia-east1-b ou asia-east1-c
+Western US: us-west1-a ou us-west1-b
+Central US: us-central1-a, us-central1-b, us-central1-c ou us-central1-f
+Eastern US: us-east1-b, us-east1-c ou us-east1-d
+Western Europe: europe-west1-b, europe-west1-c ou europe-west1-d
+Eastern Asia: asia-east1-a, asia-east1-b ou asia-east1-c
 
 Setando a região: 
 
     gcloud config set compute/region us-west1 
-gcloud config get-value compute/region
+    
+Validação:
 
-gcloud config set compute/zone
-gcloud config get-value compute/zone
+    gcloud config get-value compute/region
 
-gcloud config get-value project
-gcloud compute project-info describe --project $(gcloud config get-value project)
+Setando a Zona:
+    
+    gcloud config set compute/zone us-west1-b
+    
+Validação:
 
-export PROJECT_ID=$(gcloud config get-value project)
-export ZONE=$(gcloud config get-value compute/zone)
+    gcloud config get-value compute/zone
+
+Verificar o ID do projeto:
+
+    gcloud config get-value project
+    
+Verificar as info do projet:
+
+    gcloud compute project-info describe --project $(gcloud config get-value project)
+
+Criar uma variavel com o valor do ID do projeto:
+
+    export PROJECT_ID=$(gcloud config get-value project)
+
+Criar uma variavel com o valor da Zona:
+    
+    export ZONE=$(gcloud config get-value compute/zone)
+
+
 echo -e "PROJECT ID: $PROJECT_ID\nZONE: $ZONE"
 
 Criar a máquina virtual
