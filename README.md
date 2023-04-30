@@ -1,4 +1,4 @@
-# GCP-LAB01
+# Google Cloud Computing Foundations
 ## Lab: GSP002
 ## Getting Started with Cloud Shell and gcloud
 
